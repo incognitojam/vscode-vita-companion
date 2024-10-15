@@ -5,7 +5,7 @@
 - [x] Connect to Vita (enter IP)
 - [ ] Destroy
 - [ ] Launch
-- [ ] Reboot
+- [x] Reboot
 - [ ] Turn screen on
 - [ ] Turn screen off
 - [ ] Install VPK from path
