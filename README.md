@@ -2,7 +2,7 @@
 
 ## Commands
 
-- [ ] Connect to Vita (enter IP)
+- [x] Connect to Vita (enter IP)
 - [ ] Destroy
 - [ ] Launch
 - [ ] Reboot
