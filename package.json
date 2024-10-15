@@ -23,6 +23,43 @@
       {
         "command": "extension.helloWorld",
         "title": "Vita: Hello World"
+      },
+      {
+        "command": "extension.connect",
+        "title": "Vita: Connect",
+        "icon": "debug-disconnect"
+      },
+      {
+        "command": "extension.destroy",
+        "title": "Vita: Kill all running applications",
+        "icon": "trash"
+      },
+      {
+        "command": "extension.launch",
+        "title": "Vita: Launch application by Title ID",
+        "icon": "play"
+      },
+      {
+        "command": "extension.reboot",
+        "title": "Vita: Reboot console",
+        "icon": "debug-restart"
+      },
+      {
+        "command": "extension.screenOn",
+        "title": "Vita: Turn screen on"
+      },
+      {
+        "command": "extension.screenOff",
+        "title": "Vita: Turn screen off"
+      },
+      {
+        "command": "extension.vpk",
+        "title": "Vita: Install VPK from path"
+      },
+      {
+        "command": "extension.upload",
+        "title": "Vita: Upload file over FTP",
+        "icon": "arrow-up"
       }
     ]
   },
