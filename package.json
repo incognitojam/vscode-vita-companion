@@ -17,27 +17,28 @@
     "commands": [
       {
         "command": "extension.helloWorld",
-        "title": "Vita: Hello World"
+        "title": "Vita: Hello World",
+        "icon": "$(smiley)"
       },
       {
         "command": "extension.connect",
         "title": "Vita: Connect",
-        "icon": "debug-disconnect"
+        "icon": "$(debug-disconnect)"
       },
       {
         "command": "extension.destroy",
         "title": "Vita: Kill all running applications",
-        "icon": "trash"
+        "icon": "$(trash)"
       },
       {
         "command": "extension.launch",
         "title": "Vita: Launch application by Title ID",
-        "icon": "play"
+        "icon": "$(play)"
       },
       {
         "command": "extension.reboot",
         "title": "Vita: Reboot console",
-        "icon": "debug-restart"
+        "icon": "$(debug-restart)"
       },
       {
         "command": "extension.screenOn",
@@ -54,7 +55,7 @@
       {
         "command": "extension.upload",
         "title": "Vita: Upload file over FTP",
-        "icon": "arrow-up"
+        "icon": "$(arrow-up)"
       }
     ]
   },
