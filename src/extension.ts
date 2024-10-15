@@ -1,8 +1,10 @@
-import { commands, ExtensionContext, window } from "vscode";
+import { type ExtensionContext, commands, window } from "vscode";
 
 export function activate(context: ExtensionContext) {
-  const disposable = commands.registerCommand("extension.helloWorld", () => {
-    window.showInformationMessage("Hello, world!");
-  });
-  context.subscriptions.push(disposable);
+  // hello world command
+  context.subscriptions.push(
+    commands.registerCommand("extension.helloWorld", () => {
+      window.showInformationMessage("Hello, world!");
+    }),
+  );
 }
