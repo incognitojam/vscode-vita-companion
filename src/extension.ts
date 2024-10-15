@@ -5,13 +5,6 @@ import { validateIpOrHostname } from "./validate";
 const PORT_NETCAT = 1338;
 
 export function activate(context: ExtensionContext) {
-  // hello world command
-  context.subscriptions.push(
-    commands.registerCommand("extension.helloWorld", () => {
-      window.showInformationMessage("Hello, world!");
-    }),
-  );
-
   let vitaIp: string | undefined;
   let terminal: Terminal | undefined;
 

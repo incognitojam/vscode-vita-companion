@@ -16,11 +16,6 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.helloWorld",
-        "title": "Vita: Hello World",
-        "icon": "$(smiley)"
-      },
-      {
         "command": "extension.connect",
         "title": "Vita: Connect",
         "icon": "$(debug-disconnect)"
