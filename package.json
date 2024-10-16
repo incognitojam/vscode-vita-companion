@@ -16,39 +16,39 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.connect",
+        "command": "vitacompanion.connect",
         "title": "Vita: Connect",
         "icon": "$(debug-disconnect)"
       },
       {
-        "command": "extension.destroy",
+        "command": "vitacompanion.destroy",
         "title": "Vita: Kill all running applications",
         "icon": "$(trash)"
       },
       {
-        "command": "extension.launch",
+        "command": "vitacompanion.launch",
         "title": "Vita: Launch application by Title ID",
         "icon": "$(play)"
       },
       {
-        "command": "extension.reboot",
+        "command": "vitacompanion.reboot",
         "title": "Vita: Reboot console",
         "icon": "$(debug-restart)"
       },
       {
-        "command": "extension.screenOn",
+        "command": "vitacompanion.screenOn",
         "title": "Vita: Turn screen on"
       },
       {
-        "command": "extension.screenOff",
+        "command": "vitacompanion.screenOff",
         "title": "Vita: Turn screen off"
       },
       {
-        "command": "extension.vpk",
+        "command": "vitacompanion.vpk",
         "title": "Vita: Install VPK from path"
       },
       {
-        "command": "extension.upload",
+        "command": "vitacompanion.upload",
         "title": "Vita: Upload file over FTP",
         "icon": "$(arrow-up)"
       }

@@ -15,7 +15,7 @@ export function activate(context: ExtensionContext) {
 
   // connect command
   context.subscriptions.push(
-    commands.registerCommand("extension.connect", async () => {
+    commands.registerCommand("vitacompanion.connect", async () => {
       const result = await window.showInputBox({
         value: vitaIp,
         placeHolder: "For example: 192.168.1.10",
@@ -32,7 +32,7 @@ export function activate(context: ExtensionContext) {
 
   // reboot command
   context.subscriptions.push(
-    commands.registerCommand("extension.reboot", () => {
+    commands.registerCommand("vitacompanion.reboot", () => {
       if (!vitaIp) {
         window.showErrorMessage("No Vita IP set");
         return;
