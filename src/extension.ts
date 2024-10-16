@@ -13,6 +13,16 @@ export function activate(context: ExtensionContext) {
     return terminal;
   }
 
+  function simpleCommand(command: string, showTerminal = false) {
+    if (!vitaIp) {
+      window.showErrorMessage("No Vita IP set");
+      return;
+    }
+    const terminal = getTerminal();
+    terminal.sendText(`echo "${command}" | nc ${vitaIp} ${PORT_NETCAT}`);
+    if (showTerminal) terminal.show();
+  }
+
   // connect command
   context.subscriptions.push(
     commands.registerCommand("vitacompanion.connect", async () => {
@@ -34,47 +44,26 @@ export function activate(context: ExtensionContext) {
   // TODO: parse output to detect which commands are available
   context.subscriptions.push(
     commands.registerCommand("vitacompanion.help", () => {
-      if (!vitaIp) {
-        window.showErrorMessage("No Vita IP set");
-        return;
-      }
-      const terminal = getTerminal();
-      terminal.sendText(`echo help | nc ${vitaIp} ${PORT_NETCAT}`);
-      terminal.show();
+      simpleCommand("help", true);
     }),
   );
 
   // reboot command
   context.subscriptions.push(
     commands.registerCommand("vitacompanion.reboot", () => {
-      if (!vitaIp) {
-        window.showErrorMessage("No Vita IP set");
-        return;
-      }
-      const terminal = getTerminal();
-      terminal.sendText(`echo reboot | nc ${vitaIp} ${PORT_NETCAT}`);
+      simpleCommand("reboot");
     }),
   );
 
   // screen commands
   context.subscriptions.push(
     commands.registerCommand("vitacompanion.screenOn", () => {
-      if (!vitaIp) {
-        window.showErrorMessage("No Vita IP set");
-        return;
-      }
-      const terminal = getTerminal();
-      terminal.sendText(`echo "screen on" | nc ${vitaIp} ${PORT_NETCAT}`);
+      simpleCommand("screen on");
     }),
   );
   context.subscriptions.push(
     commands.registerCommand("vitacompanion.screenOff", () => {
-      if (!vitaIp) {
-        window.showErrorMessage("No Vita IP set");
-        return;
-      }
-      const terminal = getTerminal();
-      terminal.sendText(`echo "screen off" | nc ${vitaIp} ${PORT_NETCAT}`);
+      simpleCommand("screen off");
     }),
   );
 }
