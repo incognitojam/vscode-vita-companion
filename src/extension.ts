@@ -23,6 +23,13 @@ export function activate(context: ExtensionContext) {
     if (showTerminal) terminal.show();
   }
 
+  // detect terminal close
+  context.subscriptions.push(
+    window.onDidCloseTerminal((_terminal) => {
+      if (terminal === _terminal) terminal = undefined;
+    }),
+  );
+
   // connect command
   context.subscriptions.push(
     commands.registerCommand("vitacompanion.connect", async () => {
