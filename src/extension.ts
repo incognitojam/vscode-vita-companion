@@ -53,7 +53,28 @@ export function activate(context: ExtensionContext) {
       }
       const terminal = getTerminal();
       terminal.sendText(`echo reboot | nc ${vitaIp} ${PORT_NETCAT}`);
-      terminal.show();
+    }),
+  );
+
+  // screen commands
+  context.subscriptions.push(
+    commands.registerCommand("vitacompanion.screenOn", () => {
+      if (!vitaIp) {
+        window.showErrorMessage("No Vita IP set");
+        return;
+      }
+      const terminal = getTerminal();
+      terminal.sendText(`echo "screen on" | nc ${vitaIp} ${PORT_NETCAT}`);
+    }),
+  );
+  context.subscriptions.push(
+    commands.registerCommand("vitacompanion.screenOff", () => {
+      if (!vitaIp) {
+        window.showErrorMessage("No Vita IP set");
+        return;
+      }
+      const terminal = getTerminal();
+      terminal.sendText(`echo "screen off" | nc ${vitaIp} ${PORT_NETCAT}`);
     }),
   );
 }

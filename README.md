@@ -7,7 +7,7 @@
 - [ ] Destroy
 - [ ] Launch
 - [x] Reboot
-- [ ] Turn screen on
-- [ ] Turn screen off
+- [x] Turn screen on
+- [x] Turn screen off
 - [ ] Install VPK from path
 - [ ] Upload file over FTP
