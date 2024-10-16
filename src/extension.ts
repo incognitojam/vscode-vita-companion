@@ -30,6 +30,20 @@ export function activate(context: ExtensionContext) {
     }),
   );
 
+  // help command
+  // TODO: parse output to detect which commands are available
+  context.subscriptions.push(
+    commands.registerCommand("vitacompanion.help", () => {
+      if (!vitaIp) {
+        window.showErrorMessage("No Vita IP set");
+        return;
+      }
+      const terminal = getTerminal();
+      terminal.sendText(`echo help | nc ${vitaIp} ${PORT_NETCAT}`);
+      terminal.show();
+    }),
+  );
+
   // reboot command
   context.subscriptions.push(
     commands.registerCommand("vitacompanion.reboot", () => {
@@ -39,6 +53,7 @@ export function activate(context: ExtensionContext) {
       }
       const terminal = getTerminal();
       terminal.sendText(`echo reboot | nc ${vitaIp} ${PORT_NETCAT}`);
+      terminal.show();
     }),
   );
 }

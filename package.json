@@ -21,6 +21,11 @@
         "icon": "$(debug-disconnect)"
       },
       {
+        "command": "vitacompanion.help",
+        "title": "Vita: Show available commands",
+        "icon": "$(question)"
+      },
+      {
         "command": "vitacompanion.destroy",
         "title": "Vita: Kill all running applications",
         "icon": "$(trash)"
